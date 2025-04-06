@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://host/database # Додайте власний HOST та базу даних
+    username: user # додайте власний логін
+    password: password # додайте власний пароль
+    driverClassName: org.postgresql.Driver
+  sql:
+    init:
+      platform: postgres
