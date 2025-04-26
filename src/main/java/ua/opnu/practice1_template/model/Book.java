@@ -1,4 +1,4 @@
-package ua.opnu.practice1_template;
+package ua.opnu.practice1_template.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -7,13 +7,13 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-class Book {
+public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String title;
-    Integer yearPublished;
-    String isbn;
+   private Long id;
+    private String title;
+    private Integer yearPublished;
+    private String isbn;
     @ManyToOne
     private Author author;
     @ManyToOne

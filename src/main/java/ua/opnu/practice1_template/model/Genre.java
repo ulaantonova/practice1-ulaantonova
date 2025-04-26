@@ -1,4 +1,4 @@
-package ua.opnu.practice1_template;
+package ua.opnu.practice1_template.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,9 +10,9 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-class Genre {
+public class Genre {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String name;
+  private  Long id;
+   private String name;
 }

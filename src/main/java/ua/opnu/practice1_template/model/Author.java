@@ -1,8 +1,8 @@
-package ua.opnu.practice1_template;
-
+package ua.opnu.practice1_template.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+
 import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,12 +12,11 @@ import java.time.LocalDate;
 @Entity
 @Getter
 @Setter
-class Reader {
+
+public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String firstName;
-    String lastName;
-    String libraryCardNumber;
-    LocalDate registeredAt;
+    private Long id;
+    private String name;
+    private LocalDate birthDate;
 }

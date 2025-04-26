@@ -1,28 +1,30 @@
-package ua.opnu.practice1_template;
+package ua.opnu.practice1_template.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+
 import java.time.LocalDate;
 
 @Entity
 @Getter
 @Setter
-class Loan {
+public class Loan {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
 
 
     @ManyToOne
     @JsonManagedReference
-    Book book;
+   private Book book;
 
     @ManyToOne
     @JsonManagedReference
-    Reader reader;
+   private Reader reader;
 
-    LocalDate loanDate;
-    LocalDate returnDate;
+     private LocalDate loanDate;
+   private LocalDate returnDate;
 }
