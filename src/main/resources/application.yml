@@ -7,13 +7,11 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+
   datasource:
-    url: jdbc:postgresql://kyrsova_user:pL1QghNUnphoulx3SlSbkAYn2G70nw6U@dpg-d0smkp6mcj7s73f5tg10-a.oregon-postgres.render.com/kyrsova_maav
+    url: jdbc:postgresql://dpg-d0smkp6mcj7s73f5tg10-a.oregon-postgres.render.com:5432/kyrsova_maav
     username: kyrsova_user
     password: pL1QghNUnphoulx3SlSbkAYn2G70nw6U
     driver-class-name: org.postgresql.Driver
-  sql:
-    init:
-      mode: always
-      platform: postgres
+
 
