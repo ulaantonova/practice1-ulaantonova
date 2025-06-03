@@ -1,17 +1,18 @@
 spring:
+  datasource:
+    url: jdbc:postgresql://dpg-d0smkp6mcj7s73f5tg10-a.oregon-postgres.render.com/kyrsova_maav
+    username: kyrsova_user
+    password: pL1QghNUnphoulx3SlSbkAYn2G70nw6U
+    driver-class-name: org.postgresql.Driver
+
   jpa:
-    database: POSTGRESQL
-    show-sql: true
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
 
-  datasource:
-    url: jdbc:postgresql://dpg-d0smkp6mcj7s73f5tg10-a.oregon-postgres.render.com:5432/kyrsova_maav
-    username: kyrsova_user
-    password: pL1QghNUnphoulx3SlSbkAYn2G70nw6U
-    driver-class-name: org.postgresql.Driver
-
-
+sql:
+  init:
+    mode: never
